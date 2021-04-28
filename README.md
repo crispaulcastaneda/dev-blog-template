@@ -15,5 +15,6 @@ Blog template where a user can write his own ideas, thoughts, and new activity b
 ### Acknowledgements
 * [Google Fonts](https://fonts.google.com/)
 * [npm](https://www.npmjs.com/)
+* [Clean PNG](https://www.cleanpng.com/)
 
 2021, &copy; Cristian Paul Castañeda
