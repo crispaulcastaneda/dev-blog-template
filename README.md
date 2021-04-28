@@ -9,7 +9,7 @@ Blog template where a user can write his own ideas, thoughts, and new activity b
 
 ## How to
 1. Download or clone
-2. In your VS Code- install: `lodash, express, ejs, nodemon, and morgan.`
+2. In your VS Code- install: `lodash, express, ejs, nodemon, mongoose, and morgan.`
 3. Run the Program
 
 ### Acknowledgements
