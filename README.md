@@ -1,2 +1,7 @@
-# dev-blog-template
-Blog template made with the technologies on the topics
+# Dev Blog Template
+
+## How to install
+
+### Acknowledgements
+
+2021, &copy; Cristian Paul Castañeda
