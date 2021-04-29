@@ -1,6 +1,6 @@
 # Dev Blog Template
 Blog template where a user can write his own ideas, thoughts, and new activity by sharing and creating snippets, updates for a technology.
-
+![devblog](https://user-images.githubusercontent.com/25602936/116499812-a38c8200-a8df-11eb-852c-d0dd862d5b0d.png)
 
 ## Technologies and Markups
 ```
