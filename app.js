@@ -8,7 +8,7 @@ const Blog = require('./models/blog');
 const app = express();
 
 // Connect to mongoDB
-const dbURI = 'mongodb+srv://crispaul:test12345@devblog.6okei.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const dbURI = 'mongodb+srv://crispaul:test12345@devblog.6okei.mongodb.net/dev-blog?retryWrites=true&w=majority';
 mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
     // listen for requests
     .then((result) => app.listen(3000))
@@ -20,6 +20,7 @@ app.set('view engine', 'ejs');
 
 // middleware and static file
 app.use(morgan('dev'));
+app.use(express.urlencoded({ extended: true })); // send data when use this
 app.use(express.static('public'));
 
 // mongoose and mongo sandbox routes
@@ -78,6 +79,20 @@ app.get('/blogs', (req, res)=> {
             res.render('index', { title: 'All Blogs', blogs: result })
         })
         .catch((err)=> {
+            console.log(err);
+        })
+});
+
+// POST Method
+app.post('/blogs', (req,res) => {
+    // use middlewares
+    const blog = new Blog(req.body);
+
+    blog.save()
+        .then((result) => {
+            res.redirect('/blogs');
+        })
+        .catch((err) => {
             console.log(err);
         })
 });

@@ -14,18 +14,18 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt ullam tempora corrupti soluta officia, laborum tenetur dolore. Vitae nihil tenetur minus magni atque voluptates alias nemo! Eum autem ducimus nesciunt.</p>
         </div>
         <div class="inner-create-blog">
-            <form>
+            <form action="/blogs" method="POST">
                 <div class="form-labels">
                     <label for="title">Article Title: </label>
-                    <input type="text" id="title" required>
+                    <input type="text" id="title" name="title" required>
                 </div>
                 <div class="form-labels">
                     <label for="snippet">Tags: </label>
-                    <input type="text" id="snippet" required>
+                    <input type="text" id="snippet" name="snippet" required>
                 </div>
                 <div class="form-labels">
                     <label for="body">Blog: </label>
-                    <textarea id="body"></textarea>
+                    <textarea id="body" name="body" required></textarea>
                 </div>
                 <button>Submit</button>
             </form>
