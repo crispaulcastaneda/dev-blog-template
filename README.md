@@ -22,6 +22,6 @@ Blog template where a user can write his own ideas, thoughts, and new activity b
 * [Google Fonts](https://fonts.google.com/)
 * [npm](https://www.npmjs.com/)
 * [Clean PNG](https://www.cleanpng.com/)
-* [Database - MongoDB](https://www.mongodb.com/cloud)
+* [Database - MongoDB Atlas](https://www.mongodb.com/cloud)
 
 2021, &copy; Cristian Paul Castañeda
