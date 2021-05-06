@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- for head.ejs -->
+    <%- include('./partials/head.ejs') %>
+<body>
+
+    <!-- For the nav.ejs -->
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="blogs content">
+        <h2>{ Developers Momentum }</h2>
+
+        <div class="inner-content">
+            <% if (blogs.length > 0) { %>
+                <% blogs.forEach(blog => { %>
+                    <div class="the-content">
+                        <h3 class="title"><%= blog.title %></h3>
+                        <p class="snippet">&#10608; <%= blog.snippet %></p>
+                    </div> <hr>
+                <% }); %>
+            <% } else { %>
+                <p>There are no blogs to display...</p>
+            <% } %>
+        </div>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+</html>

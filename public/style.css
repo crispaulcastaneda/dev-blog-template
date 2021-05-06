@@ -1,0 +1,48 @@
+        /* Default */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #1a1a1d; color: #616163; font-family: 'Merriweather', sans-serif; }
+        p,a,li,h1,h2,h3,h4,h5,h6 { margin:0; padding:0; }
+        a { text-decoration: none; color: #c3073f; }
+        li { list-style: none; }
+        hr { border: 2px solid #212125; margin: 0 auto; }
+
+        /* Navigation */
+        .class-title h1 { display: inline-block; padding: 30px; color: #950740; }
+        .class-sub { display: flex; justify-content: space-around; padding: 20px; }
+        .developers { color: #c3073f; }
+        .class-sub ul li { display: inline; margin: 0 10px; }
+
+        /* Index  / HOME*/
+        .blogs { padding: 15px; }
+        .blogs h2 { margin: 0 0 35px 0; }
+        .inner-content h3 + p{ margin: 12px; }
+        .inner-content p{ margin: 0 0 0 20px }
+        .the-content { padding: 15px; }
+
+        /* About / Who */
+        .about { padding: 30px; }
+        .inner-about { padding: 35px; }
+        .inner-about h2 { margin: 15px 0; }
+        .inner-about p { margin: 9.5px 0; }
+
+        /* Blog / Create */
+        .create-blog { padding: 25px; margin: 25px; }
+        .form-title { width: 600px; margin: 0 auto; }
+        .form-title h2, p { margin-bottom: 30px; }
+        .inner-create-blog { margin: 0 auto;  width: 500px; }
+        .inner-create-blog .form-labels { margin: 10px 0;}
+        .form-labels label, input, textarea { display: block; }
+        .form-labels label { margin: 10px 0 10px 0; }
+        .form-labels textarea { height: 25vh; resize: none; letter-spacing: .50px; }
+        .form-labels input, textarea { padding: 9.5px; width: 500px; outline: none; border: none; background: #212125; color: #747477; font-family: 'Merriweather', sans-serif; box-shadow: inset 0px 0px 20px -5px #151518; transition: 0.25s ease; border-radius: 5px; }
+        .form-labels input:focus, textarea:focus { box-shadow: inset 0px 0px 20px -5px #1c1c20; }
+        button { width: 100%; padding: 8px; cursor: pointer; font-family: 'Merriweather', sans-serif; text-transform: uppercase; background: #212125; color: #747477; border: none; border-radius: 5px; transition: 0.25s ease-in-out;}
+        button:hover { background: #525151; color: #212125; }
+
+        /* 404 */
+        .not-found { width: 600px; margin: 0 auto; text-align: center; padding: 25px; }
+        .not-found img { position: relative; top: 16px; width: 200px; filter: drop-shadow(0 0 0.75rem #525151);}
+
+        /* Footer */
+        footer { text-align: center; padding: 10px;}
+        footer a { font-size: .7em; }
