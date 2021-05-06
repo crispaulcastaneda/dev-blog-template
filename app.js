@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const Blog = require('./models/blog');
+const { result } = require('lodash');
 
 
 // express app
@@ -83,7 +84,7 @@ app.get('/blogs', (req, res)=> {
         })
 });
 
-// POST Method
+// POST Req Method
 app.post('/blogs', (req,res) => {
     // use middlewares
     const blog = new Blog(req.body);
@@ -96,6 +97,18 @@ app.post('/blogs', (req,res) => {
             console.log(err);
         })
 });
+
+// Route Parameters
+app.get('/blogs/:id', (req,res) => {
+    const id = req.params.id;
+    Blog.findById(id)
+        .then(result => {
+            res.render('details', { blog: result, title: 'Blog Details' });
+        })
+        .catch(err => {
+            console.log(err);
+        })
+})
 
 // redirects
 app.get('/blogs/create', (req, res) => {
