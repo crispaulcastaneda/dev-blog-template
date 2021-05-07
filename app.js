@@ -98,6 +98,11 @@ app.post('/blogs', (req,res) => {
         })
 });
 
+// redirects
+app.get('/blogs/create', (req, res) => {
+    res.render('create', { title: 'Create' });
+});
+
 // Route Parameters
 app.get('/blogs/:id', (req,res) => {
     const id = req.params.id;
@@ -117,11 +122,6 @@ app.delete('/blogs/:id', (req, res) => {
     Blog.findByIdAndDelete(id)
         .then(result => { res.json({ redirect: '/blogs'}) })
         .catch(err => {console.log(err)})
-});
-
-// redirects
-app.get('/blogs/create', (req, res) => {
-    res.render('create', { title: 'Create' });
 });
 
 // 404
