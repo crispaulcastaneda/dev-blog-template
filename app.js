@@ -21,7 +21,7 @@ app.set('view engine', 'ejs');
 
 // middleware and static file
 app.use(morgan('dev'));
-app.use(express.urlencoded({ extended: true })); // send data when use this
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // mongoose and mongo sandbox routes
@@ -50,12 +50,12 @@ app.get('/all-blogs', (req, res) => {
         .catch((err) => {
             console.log(err);
         })
-})
+});
 
 // handler for single blog
 app.get('/single-blog', (req, res) => {
     // model.method()
-    Blog.findById('608a9fc63689313ae0632c51')
+    Blog.findById("608a9fc63689313ae0632c51")
         .then((result) => {
             res.send(result);
         })
@@ -86,7 +86,7 @@ app.get('/blogs', (req, res)=> {
 
 // POST Req Method
 app.post('/blogs', (req,res) => {
-    // use middlewares
+    // use middleware
     const blog = new Blog(req.body);
 
     blog.save()
@@ -109,6 +109,15 @@ app.get('/blogs/:id', (req,res) => {
             console.log(err);
         })
 })
+
+// Delete Request
+app.delete('/blogs/:id', (req, res) => {
+    const id = req.params.id;
+
+    Blog.findByIdAndDelete(id)
+        .then(result => { res.json({ redirect: '/blogs'}) })
+        .catch(err => {console.log(err)})
+});
 
 // redirects
 app.get('/blogs/create', (req, res) => {

@@ -12,11 +12,29 @@
         <div class="content">
             <p><%= blog.body %></p>
         </div>
-        <!-- <a data-doc="<%= blog._id %>" class="delete">Delete</a> -->
+        <a class="delete" data-del="<%= blog._id %>">X</a>
     </div>
 
     <!-- For the footer.ejs -->
     <%- include('./partials/footer.ejs') %>
+
+    <!-- Script for DELETE Method to delete from the database -->
+    <script defer>
+        'use strict'
+
+        const toTrash = document.querySelector('a.delete');
+
+        toTrash.addEventListener('click', (e) => {
+            const endpoint = `/blogs/${toTrash.dataset.del}`;
+
+            fetch(endpoint, {
+                method: 'DELETE' // Ajax Request
+        })
+            .then((response) => response.json())
+            .then((data) => console.log(data))
+            .catch(err => console.log(err))
+    });
+    </script>
 
 </body>
 </html>
