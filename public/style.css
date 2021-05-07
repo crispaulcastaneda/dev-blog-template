@@ -17,7 +17,7 @@
         .blogs h2 { margin: 0 0 35px 0; }
         .inner-content h3 + p{ margin: 12px; }
         .inner-content p{ margin: 0 0 0 20px }
-        .the-content { padding: 15px; }
+        .the-content { padding: 15px;     border-left: 10px solid crimson; margin-bottom: 25px; }
 
         /* About / Who */
         .about { padding: 30px; }
